@@ -7,12 +7,12 @@ class PetsShop:
     fake = Faker('en_US')
     BASE_PAGE = 'https://petstore.swagger.io'
     PET_NAME = random.choice(['dog', 'cat', 'bird', 'fish', 'shark', 'snake'])
-    PET_ID = fake.random_int(450, 460)
+    PET_ID = fake.random_int(1100, 1200)
     PET_STAT = 'available'
     NEW_STAT = None
     NEW_NAME = None
 
-    def _create_pet_profile(self, pet_id=PET_ID, pet_name=PET_NAME, pet_stat=PET_STAT):  # (self, id, name, stat):  #move in JSON_lib
+    def _create_pet_profile(self, pet_id=PET_ID, pet_name=PET_NAME, pet_stat=PET_STAT):
         with open('pet_account_template.json') as file:
             user_data = json.load(file)
 
